@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MD Pest Pros — Baltimore's Pest Control Specialists</title>
+<meta name="description" content="MD Pest Pros — Baltimore's trusted pest control. Bedbugs, roaches, rodents, termites. Same-day service. Licensed & guaranteed."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0a1a0c;
+  --forest:#0d3320;
+  --green:#1a6b3a;
+  --mid-green:#2d8f52;
+  --lime:#4db870;
+  --pale:#f0f7f2;
+  --stone:#e4ede6;
+  --border:#c8dece;
+  --white:#ffffff;
+  --text:#0a1a0c;
+  --body:#3a5040;
+  --muted:#7a9b82;
+  --red:#c0281e;
+  --red-pale:#fdf0ef;
+  --amber:#c87d00;
+  --max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Outfit',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(calc(100% - 48px),var(--max));margin:0 auto}
+
+/* ── RIBBON ── */
+.ribbon{background:var(--red);color:#fff;padding:11px 20px;text-align:center;font-size:.84rem;font-weight:600}
+.ribbon a{color:#fff;font-weight:800;text-decoration:underline}
+
+/* ── NAV ── */
+.topbar{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1.5px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;padding:0 24px;gap:20px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:0;flex-shrink:0}
+.logo img{height:60px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:28px;font-size:.87rem;font-weight:500;color:var(--body)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.n-call{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--body);padding:9px 16px;border-radius:999px;border:1.5px solid var(--border);background:var(--pale);transition:all .2s}
+.n-call:hover{border-color:var(--green);color:var(--green)}
+.n-cta{display:inline-flex;align-items:center;gap:8px;font-size:.87rem;font-weight:700;background:var(--green);color:#fff;padding:10px 22px;border-radius:999px;transition:all .22s;border:none;cursor:pointer}
+.n-cta:hover{background:var(--forest);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,107,58,.3)}
+.burger{display:none;width:40px;height:40px;border-radius:9px;border:1.5px solid var(--border);background:var(--pale);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px}
+
+/* ── MOBILE DRAWER ── */
+.drawer{display:none;position:fixed;inset:0;top:76px;z-index:800;background:var(--white);padding:40px 28px 60px;flex-direction:column}
+.drawer.open{display:flex}
+.drawer a.dl{font-family:'Playfair Display',serif;font-weight:700;font-size:2.2rem;color:var(--ink);padding:14px 0;border-bottom:1.5px solid var(--stone);transition:color .2s}
+.drawer a.dl:hover{color:var(--green)}
+.drawer-btns{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+.drawer-btns .n-cta,.drawer-btns .n-call{justify-content:center;font-size:.97rem;padding:15px;border-radius:12px}
+
+/* ── HERO ── */
+.hero{background:var(--forest);position:relative;overflow:hidden;min-height:88vh;display:grid;place-items:center}
+.hero-bg-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;opacity:.14}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(155deg,rgba(10,26,12,.95) 0%,rgba(13,51,32,.8) 55%,rgba(45,143,82,.12) 100%)}
+.hero-slash{position:absolute;bottom:-2px;left:0;right:0;height:110px;background:var(--white);clip-path:polygon(0 100%,100% 0,100% 100%)}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:90px 0 148px}
+
+.hero-left{}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:20px}
+.hero-eyebrow::before{content:"";width:28px;height:2px;background:var(--lime)}
+h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(3.2rem,7vw,6.5rem);line-height:.92;letter-spacing:-.03em;color:#fff;margin-bottom:24px}
+h1 .lime{color:var(--lime)}
+.hero-p{font-size:1.04rem;color:rgba(255,255,255,.68);line-height:1.78;max-width:46ch;margin-bottom:34px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;font-size:.95rem;font-weight:700;background:var(--red);color:#fff;padding:15px 32px;border-radius:12px;transition:all .22s;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(192,40,30,.4)}
+.btn-primary:hover{background:#a01e16;transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;font-size:.93rem;font-weight:600;color:rgba(255,255,255,.82);padding:15px 26px;border-radius:12px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);transition:all .22s}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.trust-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.tpill{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.65);padding:7px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+
+/* HERO RIGHT — mascot + pest cards */
+.hero-right{display:flex;flex-direction:column;align-items:center;gap:16px}
+.mascot-wrap{position:relative;text-align:center}
+.mascot-wrap img.mascot{height:180px;width:auto;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4))}
+.mascot-bubble{
+  position:absolute;top:10px;right:-20px;
+  background:#fff;border-radius:16px 16px 16px 4px;
+  padding:12px 16px;box-shadow:0 8px 28px rgba(0,0,0,.2);
+  font-size:.8rem;font-weight:700;color:var(--ink);
+  white-space:nowrap;max-width:160px;line-height:1.4;
+}
+.mascot-bubble::after{content:"";position:absolute;bottom:-8px;left:12px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #fff}
+.pest-strip{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:16px 20px;
+}
+.pest-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:9px 13px;transition:all .2s;cursor:default}
+.pest-chip:hover{background:rgba(77,184,112,.15);border-color:rgba(77,184,112,.3)}
+.pest-chip img{width:32px;height:32px;object-fit:contain;border-radius:6px;background:rgba(255,255,255,.1)}
+.pest-chip span{font-size:.77rem;font-weight:600;color:rgba(255,255,255,.8)}
+
+/* ── TICKER ── */
+.ticker-bar{background:var(--mid-green);overflow:hidden}
+.ticker-inner{display:flex;height:48px;align-items:center;overflow:hidden}
+.ticker-track{display:flex;white-space:nowrap;animation:slide 35s linear infinite}
+.t-item{display:inline-flex;align-items:center;gap:10px;padding:0 44px;border-right:1px solid rgba(255,255,255,.15);font-size:.82rem;font-weight:500;color:rgba(255,255,255,.88);height:48px}
+.t-stars{color:#ffd040;letter-spacing:1px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── STATS ── */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1.5px solid var(--border);background:var(--white)}
+.sc{padding:30px 20px;text-align:center;border-right:1.5px solid var(--border)}
+.sc:last-child{border-right:none}
+.sc strong{display:block;font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--green);line-height:1;margin-bottom:6px}
+.sc span{font-size:.77rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* ── SECTIONS ── */
+.sec{padding:96px 0}
+.sec.pale{background:var(--pale)}
+.sec.stone{background:var(--stone)}
+.sec.dark{background:var(--forest)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kicker::after{content:"";width:28px;height:2px;background:var(--green)}
+.sec.dark .kicker{color:var(--lime)}
+.sec.dark .kicker::after{background:var(--lime)}
+h2{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.4rem,5vw,4rem);line-height:.95;letter-spacing:-.025em;color:var(--ink)}
+.sec.dark h2{color:#fff}
+.section-sub{color:var(--body);font-size:1rem;line-height:1.78;max-width:50ch;margin-top:14px}
+.sec.dark .section-sub{color:rgba(255,255,255,.62)}
+
+/* ── PEST PHOTO GRID ── */
+.pest-grid-section{background:var(--ink);padding:72px 0}
+.pest-photo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:40px}
+.pest-photo-card{
+  border-radius:14px;overflow:hidden;position:relative;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  padding:18px 12px;text-align:center;cursor:pointer;
+  transition:all .25s;
+}
+.pest-photo-card:hover{background:rgba(77,184,112,.12);border-color:rgba(77,184,112,.35);transform:translateY(-4px)}
+.pest-photo-card img{width:64px;height:64px;object-fit:contain;margin:0 auto 12px;border-radius:8px}
+.pest-photo-card span{display:block;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.04em;text-transform:uppercase}
+
+/* ── SERVICES ── */
+.svc-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-card{background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:32px 28px;transition:all .28s;position:relative;overflow:hidden}
+.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(26,107,58,.1)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card.featured{border-color:var(--green);box-shadow:0 0 0 4px rgba(26,107,58,.07)}
+.svc-card.featured::before{transform:scaleX(1)}
+.featured-pill{position:absolute;top:20px;right:20px;background:var(--green);color:#fff;font-size:.67rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.svc-icon-box{width:56px;height:56px;border-radius:14px;background:var(--pale);border:1.5px solid var(--border);display:grid;place-items:center;margin-bottom:20px}
+.svc-card h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--ink);margin-bottom:10px}
+.price-tag{font-family:'Playfair Display',serif;font-weight:900;font-size:1.75rem;color:var(--green);line-height:1;margin-bottom:14px}
+.price-tag small{font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:500;color:var(--muted)}
+.svc-card p{color:var(--body);font-size:.9rem;line-height:1.72;margin-bottom:14px}
+.svc-list{list-style:none;display:grid;gap:6px}
+.svc-list li{font-size:.85rem;color:var(--body);padding-left:20px;position:relative;line-height:1.5}
+.svc-list li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.gchip{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:.77rem;font-weight:700;color:var(--green);background:var(--pale);padding:7px 13px;border-radius:999px;border:1px solid var(--border)}
+.gchip.strong{background:var(--green);color:#fff;border-color:var(--green)}
+
+/* ── PEST SPOTTER ── */
+.spotter-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.spotter-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.sp-btn{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;padding:16px 10px;text-align:center;cursor:pointer;
+  transition:all .25s;
+}
+.sp-btn:hover,.sp-btn.active{background:rgba(77,184,112,.12);border-color:rgba(77,184,112,.35);transform:translateY(-3px)}
+.sp-btn img{width:52px;height:52px;object-fit:contain;margin:0 auto 10px;border-radius:8px;background:rgba(255,255,255,.05);padding:4px}
+.sp-btn span{display:block;font-size:.74rem;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.04em;text-transform:uppercase}
+.spotter-detail{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:32px}
+.spotter-detail .det-img{width:80px;height:80px;object-fit:contain;margin-bottom:16px;border-radius:12px;background:rgba(255,255,255,.07);padding:8px}
+.spotter-detail h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:10px}
+.spotter-detail p{color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.75;margin-bottom:18px}
+.sd-facts{display:grid;gap:9px}
+.sd-fact{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.5}
+.sd-fact::before{content:"▲";font-size:.55rem;color:#ff8080;flex-shrink:0;margin-top:4px}
+.sp-cta{display:inline-flex;align-items:center;gap:9px;margin-top:22px;background:var(--red);color:#fff;font-size:.9rem;font-weight:700;padding:13px 24px;border-radius:10px;transition:all .2s}
+.sp-cta:hover{background:#a01e16;transform:translateY(-1px)}
+
+/* ── WARNING ── */
+.warning-section{background:linear-gradient(135deg,#1a0808,#2e1010);padding:72px 0;border-top:1px solid rgba(192,40,30,.2);border-bottom:1px solid rgba(192,40,30,.2)}
+.warn-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.warn-signs{display:grid;gap:14px;margin-top:26px}
+.warn-item{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:18px 20px;background:rgba(192,40,30,.08);border:1px solid rgba(192,40,30,.2);border-radius:14px}
+.warn-icon{width:44px;height:44px;border-radius:10px;background:rgba(192,40,30,.2);border:1px solid rgba(192,40,30,.3);display:grid;place-items:center;flex-shrink:0}
+.warn-item strong{display:block;color:#fff;font-size:.92rem;font-weight:700;margin-bottom:3px}
+.warn-item p{color:rgba(255,255,255,.52);font-size:.83rem;line-height:1.5}
+.cta-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:40px;text-align:center}
+.cta-big{font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:10px}
+.cta-box .sub{color:rgba(255,255,255,.6);font-size:.93rem;line-height:1.7;margin-bottom:28px}
+.btn-urgent{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;font-size:1rem;font-weight:700;background:var(--red);color:#fff;padding:17px;border-radius:12px;border:none;cursor:pointer;transition:all .22s;box-shadow:0 6px 24px rgba(192,40,30,.5)}
+.btn-urgent:hover{background:#a01e16;transform:translateY(-2px)}
+.sameday{margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+/* ── HOW IT WORKS ── */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px}
+.step{padding:36px 28px;border-right:1.5px solid var(--border);position:relative;transition:background .2s}
+.step:last-child{border-right:none}
+.step:hover{background:var(--pale)}
+.step-num{font-family:'Playfair Display',serif;font-weight:900;font-size:3.8rem;line-height:1;margin-bottom:16px;background:linear-gradient(135deg,var(--green),var(--lime));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.step-ico{width:44px;height:44px;border-radius:11px;background:var(--pale);border:1.5px solid var(--border);display:grid;place-items:center;margin-bottom:16px}
+.step h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:10px}
+.step p{font-size:.87rem;color:var(--body);line-height:1.7}
+.step-arr{position:absolute;top:36px;right:-16px;width:32px;height:32px;background:var(--white);border:1.5px solid var(--border);border-radius:50%;display:grid;place-items:center;z-index:2}
+.step:last-child .step-arr{display:none}
+
+/* ── COMMERCIAL ── */
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.comm-photo{border-radius:22px;overflow:hidden;position:relative;border:1.5px solid var(--border)}
+.comm-photo img{width:100%;height:480px;object-fit:cover;display:block}
+.comm-photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(13,51,32,.88));padding:28px}
+.comm-stat{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:#fff;line-height:1}
+.comm-label{font-size:.82rem;color:rgba(255,255,255,.7);margin-top:4px}
+.comm-list{display:grid;gap:13px;margin-top:28px}
+.comm-row{display:flex;align-items:flex-start;gap:14px;padding:17px 18px;background:var(--white);border:1.5px solid var(--border);border-radius:12px;transition:all .22s}
+.comm-row:hover{border-color:var(--green);background:var(--pale)}
+.comm-ico{width:40px;height:40px;flex-shrink:0;background:var(--pale);border:1.5px solid var(--border);border-radius:10px;display:grid;place-items:center}
+.comm-row strong{display:block;font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:3px}
+.comm-row span{font-size:.83rem;color:var(--body)}
+
+/* ── GUARANTEE BANNER ── */
+.guarantee-banner{background:var(--green);padding:72px 0;position:relative;overflow:hidden}
+.guarantee-banner::before{content:"";position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.05)}
+.g-inner{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;position:relative;z-index:1}
+.g-badge-wrap img{width:150px;height:150px;object-fit:contain;border-radius:50%;border:3px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);padding:10px}
+.g-text h2{color:#fff;margin-bottom:12px}
+.g-text p{color:rgba(255,255,255,.78);font-size:.97rem;line-height:1.75;max-width:50ch}
+.g-points{display:flex;flex-direction:column;gap:10px;min-width:220px}
+.gp{display:flex;align-items:center;gap:10px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.85);padding:10px 14px;background:rgba(255,255,255,.08);border-radius:8px;border:1px solid rgba(255,255,255,.12)}
+
+/* ── REVIEWS ── */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.rev-card{background:var(--white);border:1.5px solid var(--border);border-radius:20px;padding:28px;transition:all .25s}
+.rev-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,107,58,.08)}
+.rev-stars{display:flex;gap:3px;margin-bottom:14px}
+.rev-card blockquote{font-size:.91rem;color:var(--body);line-height:1.75;font-style:italic;margin-bottom:20px}
+.rev-author{display:flex;align-items:center;gap:10px;border-top:1px solid var(--stone);padding-top:16px}
+.rev-avatar{width:40px;height:40px;border-radius:50%;background:var(--green);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;color:#fff;flex-shrink:0}
+.rev-author strong{display:block;font-size:.87rem;font-weight:700;color:var(--ink)}
+.rev-author span{font-size:.77rem;color:var(--muted)}
+.google-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:32px}
+.google-link{display:inline-flex;align-items:center;gap:10px;padding:11px 20px;border-radius:999px;border:1.5px solid var(--border);font-size:.83rem;font-weight:600;color:var(--body);background:var(--white);transition:all .2s}
+.google-link:hover{border-color:var(--green);color:var(--green)}
+.google-link img{height:20px;width:auto}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+.info-list{display:grid;gap:12px;margin-top:28px}
+.info-row{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--white);border:1.5px solid var(--border);border-radius:12px;transition:border-color .2s}
+.info-row:hover{border-color:var(--green)}
+.info-ico{width:40px;height:40px;flex-shrink:0;background:var(--pale);border:1.5px solid var(--border);border-radius:10px;display:grid;place-items:center}
+.info-row small{display:block;font-size:.71rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;margin-bottom:4px}
+.info-row strong{font-size:.93rem;color:var(--ink)}
+.license-note{margin-top:18px;padding:15px 18px;background:#fffbf0;border:1px solid rgba(200,125,0,.25);border-radius:10px;font-size:.83rem;color:var(--ink)}
+.license-note strong{color:var(--amber)}
+.area-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.area-chip{font-size:.78rem;font-weight:600;color:var(--body);padding:7px 13px;background:var(--white);border:1px solid var(--border);border-radius:999px}
+.payment-strip{margin-top:20px;border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;background:var(--white);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.payment-strip small{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:block;margin-bottom:6px}
+.payment-strip img{height:28px;width:auto;object-fit:contain}
+
+/* ── FORM ── */
+.form-card{background:var(--white);border:1.5px solid var(--border);border-radius:22px;overflow:hidden}
+.form-top{background:var(--forest);padding:28px 32px;display:flex;align-items:center;gap:16px}
+.form-top-img{width:52px;height:52px;object-fit:contain;border-radius:12px;background:rgba(255,255,255,.1);padding:4px}
+.form-top h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff}
+.form-top p{color:rgba(255,255,255,.6);font-size:.82rem;margin-top:3px}
+.form-body{padding:28px 32px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fg .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.71rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{background:var(--pale);border:1.5px solid var(--border);border-radius:10px;padding:13px 16px;font-family:'Outfit',sans-serif;font-size:.92rem;color:var(--ink);outline:none;transition:border-color .2s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);background:var(--white)}
+.field textarea{min-height:110px;resize:vertical}
+.form-foot{padding:0 32px 32px}
+.submit-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font-size:.97rem;font-weight:700;background:var(--green);color:#fff;padding:16px;border-radius:12px;border:none;cursor:pointer;transition:all .22s}
+.submit-btn:hover{background:var(--forest);transform:translateY(-1px)}
+.form-note{margin-top:12px;text-align:center;font-size:.8rem;color:var(--muted)}
+#formMsg{padding:10px 0;font-size:.87rem;font-weight:700;color:var(--green);font-family:'Playfair Display',serif}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:52px 0 32px}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-logo img{height:52px;width:auto;object-fit:contain;margin-bottom:14px}
+.foot-about{font-size:.83rem;color:rgba(255,255,255,.38);line-height:1.75;max-width:28ch}
+.foot-fb{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 14px;transition:all .2s}
+.foot-fb:hover{color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.3)}
+.foot-fb img{width:18px;height:18px;object-fit:contain;border-radius:4px}
+.foot-col h4{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:16px}
+.foot-col a{display:block;font-size:.83rem;color:rgba(255,255,255,.38);margin-bottom:9px;transition:color .2s}
+.foot-col a:hover{color:rgba(255,255,255,.8)}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.25)}
+
+/* ── FLOAT CTA ── */
+.float-cta{display:none;position:fixed;bottom:20px;right:20px;z-index:700;background:var(--red);color:#fff;border-radius:999px;padding:14px 24px;font-weight:700;font-size:.93rem;box-shadow:0 8px 28px rgba(192,40,30,.5);align-items:center;gap:9px;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;padding:80px 0 130px}
+  .hero-right{display:none}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-header{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:none}
+  .step:nth-child(3){border-top:1.5px solid var(--border)}
+  .step:nth-child(2) .step-arr,.step:nth-child(4) .step-arr{display:none}
+  .comm-grid{grid-template-columns:1fr;gap:44px}
+  .comm-photo img{height:360px}
+  .spotter-inner{grid-template-columns:1fr}
+  .g-inner{grid-template-columns:1fr;text-align:center}
+  .g-points{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .contact-grid{grid-template-columns:1fr;gap:44px}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .warn-inner{grid-template-columns:1fr;gap:40px}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .sc:nth-child(2){border-right:none}
+  .sc:nth-child(1),.sc:nth-child(2){border-bottom:1.5px solid var(--border)}
+  .sc:nth-child(3){border-right:1.5px solid var(--border)}
+  .pest-photo-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:768px){
+  .nav-links,.nav-actions .n-call{display:none}
+  .burger{display:flex}
+  .float-cta{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1.5px solid var(--border)}
+  .step:last-child{border-bottom:none}
+  .step:nth-child(3){border-top:none}
+  .step-arr{display:none!important}
+  .spotter-list{grid-template-columns:repeat(2,1fr)}
+  .pest-photo-grid{grid-template-columns:repeat(3,1fr)}
+  .foot-top{grid-template-columns:1fr}
+  .sec{padding:64px 0}
+  h2{font-size:clamp(2rem,7vw,3rem)}
+  h1{font-size:clamp(2.8rem,11vw,4.5rem)}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column}
+  .hero-btns a,.hero-btns button{width:100%;justify-content:center}
+  .fg{grid-template-columns:1fr}
+  .form-top,.form-body,.form-foot{padding-left:20px;padding-right:20px}
+  .pest-photo-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- RIBBON -->
+<div class="ribbon">
+  <strong>Same-Day Service Available</strong> — Pests multiply fast. Don't wait. <a href="tel:14432266064">Call 443-226-6064 now →</a>
+</div>
+
+<!-- NAV -->
+<header class="topbar">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <img src="https://static.wixstatic.com/media/e90401_ad0c2cca82bf4e0c9eba9a8ecba9a951~mv2.jpg/v1/crop/x_0,y_0,w_383,h_95/fill/w_532,h_132,al_c,lg_1,q_80,enc_avif,quality_auto/MDPest_1_edited.jpg" alt="MD Pest Pros logo">
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#spotter">Pest Spotter</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="n-call" href="tel:14432266064">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        443-226-6064
+      </a>
+      <a class="n-cta" href="#contact">Free Inspection</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <a class="dl" href="#services" onclick="closeD()">Services</a>
+  <a class="dl" href="#spotter" onclick="closeD()">Pest Spotter</a>
+  <a class="dl" href="#commercial" onclick="closeD()">Commercial</a>
+  <a class="dl" href="#reviews" onclick="closeD()">Reviews</a>
+  <a class="dl" href="#contact" onclick="closeD()">Contact</a>
+  <div class="drawer-btns">
+    <a class="btn-primary" href="tel:14432266064">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call 443-226-6064
+    </a>
+    <a class="n-cta" href="#contact" onclick="closeD()" style="border-radius:12px;padding:15px;justify-content:center">Free Inspection</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg-img"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-slash"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="reveal visible">
+        <div class="hero-eyebrow">Baltimore's Trusted Pest Control · 10+ Years</div>
+        <h1>Your Home.<br>Pest-<span class="lime">Free.</span><br>Guaranteed.</h1>
+        <p class="hero-p">MD Pest Pros eliminates bedbugs, roaches, rodents, termites, and every pest in between from Baltimore homes and businesses. Safe, effective, and always guaranteed.</p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="tel:14432266064">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call 443-226-6064
+          </a>
+          <a class="btn-secondary" href="#contact">Schedule Free Inspection</a>
+        </div>
+        <div class="trust-pills">
+          <div class="tpill">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            MD Licensed #31917
+          </div>
+          <div class="tpill">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            10+ Years in Baltimore
+          </div>
+          <div class="tpill">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Family &amp; Pet Safe
+          </div>
+          <div class="tpill">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Satisfaction Guaranteed
+          </div>
+        </div>
+      </div>
+      <!-- Hero right: mascot + pest photo chips -->
+      <div class="hero-right">
+        <div class="mascot-wrap">
+          <img class="mascot" src="https://static.wixstatic.com/media/2278c8_dd55a1c7506e4bf685abd6e9d446b6c9~mv2.png/v1/fill/w_148,h_183,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/exterm_4.png" alt="MD Pest Pros exterminator">
+          <div class="mascot-bubble">Bugged Out?<br>Help is one<br>call away! 💪</div>
+        </div>
+        <div class="pest-strip">
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_95b43e579fc4461db96e17da4ae3f6a6~mv2.jpg/v1/fill/w_82,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/americ_cockroach.jpg" alt="Cockroach">
+            <span>Roaches</span>
+          </div>
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_47559e6721834ee9b943c7856885cf24~mv2.jpg/v1/fill/w_95,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/flea.jpg" alt="Flea">
+            <span>Fleas</span>
+          </div>
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_cc29f71d7b5d408a92c1d347e8221819~mv2.jpg/v1/fill/w_130,h_60,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house_mouse.jpg" alt="Mouse">
+            <span>Rodents</span>
+          </div>
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_856aedc5f7da4f4e8c10aac24d975b61~mv2_d_1390_1321_s_2.jpg/v1/crop/x_0,y_0,w_1169,h_1321/fill/w_74,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/stinkbug.jpg" alt="Stink bug">
+            <span>Stink Bugs</span>
+          </div>
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_88462105fdda4f9490045c8275727fcf~mv2.jpg/v1/fill/w_73,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/acrobat_ant.jpg" alt="Ant">
+            <span>Ants</span>
+          </div>
+          <div class="pest-chip">
+            <img src="https://static.wixstatic.com/media/2278c8_17f27b394e3844a998398227fc4f7c84~mv2.jpg/v1/crop/x_105,y_0,w_304,h_342/fill/w_72,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/COBWEB.jpg" alt="Spider">
+            <span>Spiders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Completely eliminated our bedbug problem — professional and thorough." — Sarah M., Baltimore</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Called Friday, they arrived Saturday morning. Fastest response I've seen." — James T., Catonsville</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"The cockroach knock-out plan worked. That 90-day guarantee is real." — Keisha R., Baltimore</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Honest pricing, no hidden fees. They treat you like family." — David L., Pikesville</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Our restaurant has been pest-free ever since switching to MD Pest Pros." — Maria G.</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Completely eliminated our bedbug problem — professional and thorough." — Sarah M., Baltimore</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Called Friday, they arrived Saturday morning. Fastest response I've seen." — James T., Catonsville</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"The cockroach knock-out plan worked. That 90-day guarantee is real." — Keisha R., Baltimore</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Honest pricing, no hidden fees. They treat you like family." — David L., Pikesville</div>
+      <div class="t-item"><span class="t-stars">★★★★★</span>"Our restaurant has been pest-free ever since switching to MD Pest Pros." — Maria G.</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="sc reveal"><strong>10+</strong><span>Years in Baltimore</span></div>
+  <div class="sc reveal"><strong>100%</strong><span>Satisfaction Guaranteed</span></div>
+  <div class="sc reveal"><strong>5★</strong><span>Google Rated</span></div>
+  <div class="sc reveal"><strong>Same Day</strong><span>Service Available</span></div>
+</div>
+
+<!-- PEST PHOTO GRID -->
+<section class="pest-grid-section">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <div class="kicker" style="justify-content:center">We Exterminate</div>
+      <h2 style="color:#fff">Bedbugs. Roaches. Rodents.<br>Termites. Ants. And More.</h2>
+    </div>
+    <div class="pest-photo-grid reveal">
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_e65f77b719124d519d783e24ee7aef38~mv2.gif" alt="Bed Bug">
+        <span>Bed Bugs</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_856aedc5f7da4f4e8c10aac24d975b61~mv2_d_1390_1321_s_2.jpg/v1/crop/x_0,y_0,w_1169,h_1321/fill/w_74,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/stinkbug.jpg" alt="Stink Bug">
+        <span>Stink Bugs</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_17f27b394e3844a998398227fc4f7c84~mv2.jpg/v1/crop/x_105,y_0,w_304,h_342/fill/w_72,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/COBWEB.jpg" alt="Spider">
+        <span>Spiders</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_95b43e579fc4461db96e17da4ae3f6a6~mv2.jpg/v1/fill/w_82,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/americ_cockroach.jpg" alt="Cockroach">
+        <span>Roaches</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_abea55651c194e948bc60e1dafe58466~mv2.jpg/v1/crop/x_93,y_109,w_349,h_347/fill/w_81,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fly.jpg" alt="Fly">
+        <span>Flies</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_e50c93fafc564fb0bb63533c2554d1b1~mv2_d_4589_3059_s_4_2.jpg/v1/crop/x_1300,y_222,w_2187,h_2577/fill/w_71,h_84,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/earwig.jpg" alt="Earwig">
+        <span>Earwigs</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_e40e37ca67994f8b9769b326a3f4f131~mv2.jpg/v1/crop/x_23,y_0,w_235,h_300/fill/w_68,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/silverfish.jpg" alt="Silverfish">
+        <span>Silverfish</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_88462105fdda4f9490045c8275727fcf~mv2.jpg/v1/fill/w_73,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/acrobat_ant.jpg" alt="Ant">
+        <span>Ants</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_51c00604bb40481a9a45e81b52eac6c3~mv2.jpg/v1/crop/x_0,y_0,w_254,h_191/fill/w_109,h_79,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/weevil.jpg" alt="Weevil">
+        <span>Weevils</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_47559e6721834ee9b943c7856885cf24~mv2.jpg/v1/fill/w_95,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/flea.jpg" alt="Flea">
+        <span>Fleas</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_cc6ac1dbaede419d852672e69ad4d244~mv2.jpg/v1/crop/x_69,y_31,w_349,h_298/fill/w_80,h_69,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/indian%20meal%20moth.jpg" alt="Moths">
+        <span>Moths</span>
+      </div>
+      <div class="pest-photo-card" onclick="document.getElementById('spotter').scrollIntoView({behavior:'smooth'})">
+        <img src="https://static.wixstatic.com/media/2278c8_cc29f71d7b5d408a92c1d347e8221819~mv2.jpg/v1/fill/w_130,h_60,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house_mouse.jpg" alt="Mouse">
+        <span>Rodents</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="svc-header reveal">
+      <div>
+        <div class="kicker">Service Plans</div>
+        <h2>Clear Pricing.<br>Real Guarantees.</h2>
+      </div>
+      <p class="section-sub">No tricks, no gimmicks — just the honest pest control MD Pest Pros has delivered to Baltimore families for over 10 years. Every plan is backed by a written guarantee.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal">
+        <div class="svc-icon-box">
+          <img src="https://static.wixstatic.com/media/2278c8_88462105fdda4f9490045c8275727fcf~mv2.jpg/v1/fill/w_73,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/acrobat_ant.jpg" alt="Common pests" style="width:36px;height:36px;object-fit:contain;border-radius:6px">
+        </div>
+        <h3>Common Pest Service</h3>
+        <div class="price-tag">$150 <small>/ starting at</small></div>
+        <p>Safe, effective treatment for the most common household pests. Covers a wide variety of insects — backed by our satisfaction guarantee.</p>
+        <ul class="svc-list">
+          <li>Spiders, stink bugs &amp; earwigs</li>
+          <li>Silverfish, moths &amp; weevils</li>
+          <li>Flies and general insects</li>
+          <li>2–4 services to eliminate infestation</li>
+        </ul>
+        <div class="gchip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Satisfaction Guaranteed
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-icon-box">
+          <img src="https://static.wixstatic.com/media/2278c8_cc29f71d7b5d408a92c1d347e8221819~mv2.jpg/v1/fill/w_130,h_60,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house_mouse.jpg" alt="Rodent" style="width:36px;height:36px;object-fit:contain;border-radius:6px">
+        </div>
+        <h3>Rodent Control</h3>
+        <div class="price-tag">$125 <small>/ starting at</small></div>
+        <p>Mice and rats carry disease and damage your home. We eliminate them completely and identify how they're getting in.</p>
+        <ul class="svc-list">
+          <li>Mice &amp; rat elimination</li>
+          <li>Bait stations &amp; trapping</li>
+          <li>Entry point identification</li>
+          <li>2–4 services to resolve</li>
+        </ul>
+        <div class="gchip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Satisfaction Guaranteed
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Property Inspection</h3>
+        <div class="price-tag">$150 <small>/ starting at</small></div>
+        <p>Buying a home? We inspect for pests and provide wood-destroying insect reports for a confident purchase.</p>
+        <ul class="svc-list">
+          <li>Full property inspection</li>
+          <li>Wood-destroying insect report</li>
+          <li>Inspection cost credited to treatment</li>
+          <li>No tricks or gimmicks</li>
+        </ul>
+        <div class="gchip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          No Hidden Fees
+        </div>
+      </article>
+
+      <article class="svc-card featured reveal">
+        <div class="featured-pill">Most Popular</div>
+        <div class="svc-icon-box" style="background:var(--green);border-color:var(--green)">
+          <img src="https://static.wixstatic.com/media/2278c8_95b43e579fc4461db96e17da4ae3f6a6~mv2.jpg/v1/fill/w_82,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/americ_cockroach.jpg" alt="Cockroach" style="width:36px;height:36px;object-fit:contain;border-radius:6px">
+        </div>
+        <h3>Cockroach Knock-Out</h3>
+        <div class="price-tag">$725 <small>/ 6-service plan</small></div>
+        <p>Attacks both adult roaches AND their eggs with a proven multi-visit protocol. The most comprehensive roach elimination we offer.</p>
+        <ul class="svc-list">
+          <li>Thorough inspection + initial treatment</li>
+          <li>2 weekly follow-up treatments</li>
+          <li>3 bi-weekly follow-up treatments</li>
+          <li>Installment payment available</li>
+        </ul>
+        <div class="gchip strong">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          90-Day Guarantee
+        </div>
+      </article>
+
+      <article class="svc-card featured reveal">
+        <div class="featured-pill">Specialist</div>
+        <div class="svc-icon-box" style="background:var(--green);border-color:var(--green)">
+          <img src="https://static.wixstatic.com/media/2278c8_e65f77b719124d519d783e24ee7aef38~mv2.gif" alt="Bed Bug" style="width:36px;height:36px;object-fit:contain;border-radius:6px">
+        </div>
+        <h3>Bedbug Extermination</h3>
+        <div class="price-tag">$1,200 <small>/ 4-week plan</small></div>
+        <p>Baltimore's Bedbug Specialist. Our tested and proven 4-week treatment plan eliminates bedbugs completely — guaranteed.</p>
+        <ul class="svc-list">
+          <li>4 weekly treatments</li>
+          <li>Guaranteed full elimination</li>
+          <li>4-installment payment option</li>
+          <li>Service contract required</li>
+        </ul>
+        <div class="gchip strong">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Full Elimination Guaranteed
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Termite Treatment</h3>
+        <div class="price-tag">Call <small>for your quote</small></div>
+        <p>Termites destroy silently for years. We treat once and they're gone — backed by our full 1-year written guarantee.</p>
+        <ul class="svc-list">
+          <li>Phone estimates available</li>
+          <li>Priced by property square footage</li>
+          <li>Chemical treatment method</li>
+          <li>Free re-treatment within 1 year</li>
+        </ul>
+        <div class="gchip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          1-Year 100% Guarantee
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PEST SPOTTER -->
+<section class="sec dark" id="spotter">
+  <div class="wrap">
+    <div class="spotter-inner">
+      <div>
+        <div class="kicker">Interactive Pest Guide</div>
+        <h2>What's In<br>Your Home?</h2>
+        <p class="section-sub">Tap any pest to understand the real threat and why quick action matters. Then call us.</p>
+        <div class="spotter-list">
+          <div class="sp-btn active" onclick="showPest('bedbug',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_e65f77b719124d519d783e24ee7aef38~mv2.gif" alt="Bed Bug">
+            <span>Bed Bugs</span>
+          </div>
+          <div class="sp-btn" onclick="showPest('roach',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_95b43e579fc4461db96e17da4ae3f6a6~mv2.jpg/v1/fill/w_82,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/americ_cockroach.jpg" alt="Cockroach">
+            <span>Roaches</span>
+          </div>
+          <div class="sp-btn" onclick="showPest('mouse',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_cc29f71d7b5d408a92c1d347e8221819~mv2.jpg/v1/fill/w_130,h_60,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house_mouse.jpg" alt="Mouse">
+            <span>Rodents</span>
+          </div>
+          <div class="sp-btn" onclick="showPest('flea',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_47559e6721834ee9b943c7856885cf24~mv2.jpg/v1/fill/w_95,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/flea.jpg" alt="Flea">
+            <span>Fleas</span>
+          </div>
+          <div class="sp-btn" onclick="showPest('ant',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_88462105fdda4f9490045c8275727fcf~mv2.jpg/v1/fill/w_73,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/acrobat_ant.jpg" alt="Ant">
+            <span>Ants</span>
+          </div>
+          <div class="sp-btn" onclick="showPest('stink',this)">
+            <img src="https://static.wixstatic.com/media/2278c8_856aedc5f7da4f4e8c10aac24d975b61~mv2_d_1390_1321_s_2.jpg/v1/crop/x_0,y_0,w_1169,h_1321/fill/w_74,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/stinkbug.jpg" alt="Stink Bug">
+            <span>Stink Bugs</span>
+          </div>
+        </div>
+      </div>
+      <div class="spotter-detail" id="spotter-detail">
+        <img class="det-img" id="det-img" src="https://static.wixstatic.com/media/2278c8_e65f77b719124d519d783e24ee7aef38~mv2.gif" alt="Pest">
+        <h3 id="det-title">Bed Bugs</h3>
+        <p id="det-desc">Small reddish-brown insects that feed on blood while you sleep. They hide in mattress seams, furniture cracks, and baseboards — and spread room to room rapidly.</p>
+        <div class="sd-facts" id="det-facts">
+          <div class="sd-fact">A single female lays up to 500 eggs in her lifetime.</div>
+          <div class="sd-fact">They survive up to 1 full year without feeding.</div>
+          <div class="sd-fact">Store-bought sprays do not kill eggs — professional treatment required.</div>
+        </div>
+        <a class="sp-cta" href="tel:14432266064">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call for Same-Day Service
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARNING -->
+<div class="warning-section">
+  <div class="wrap">
+    <div class="warn-inner">
+      <div>
+        <div class="kicker" style="color:rgba(255,120,100,.7)">Don't Wait</div>
+        <h2 style="color:#fff">Seeing "Just a Few" Pests?</h2>
+        <p style="color:rgba(255,255,255,.6);margin-top:14px;font-size:1rem;line-height:1.78;max-width:44ch">If you're seeing even a few pests, there's already a much bigger problem you <em>can't</em> see. Every day you wait, the infestation — and the cost — grows.</p>
+        <div class="warn-signs">
+          <div class="warn-item">
+            <div class="warn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff8080" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <div><strong>Droppings near baseboards or cabinets</strong><p>Almost always signals a hidden rodent or roach infestation inside walls.</p></div>
+          </div>
+          <div class="warn-item">
+            <div class="warn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff8080" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <div><strong>Red bites or welts when you wake up</strong><p>Classic bedbug sign. They spread room-to-room within days if not treated.</p></div>
+          </div>
+          <div class="warn-item">
+            <div class="warn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff8080" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg>
+            </div>
+            <div><strong>Hollow-sounding wood or mud tubes</strong><p>Termites silently destroy structural wood for years before any damage shows.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-box reveal">
+        <img src="https://static.wixstatic.com/media/2278c8_48d32ce151f14e38a8555e3de03a8d89~mv2.gif" alt="Animated ant" style="width:70px;height:70px;object-fit:contain;margin:0 auto 14px">
+        <div class="cta-big">NOW</div>
+        <p class="sub">The sooner you call, the less damage is done — and the less it costs. Help is one call away.</p>
+        <a class="btn-urgent" href="tel:14432266064">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call 443-226-6064
+        </a>
+        <div class="sameday">Same-day service available across Baltimore</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="sec pale">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">The Process</div>
+      <h2>Simple. Fast. Effective.</h2>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step">
+        <div class="step-arr">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+        <div class="step-num">01</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us at 443-226-6064 or fill out our form. We respond fast — same-day service is often available across Baltimore.</p>
+      </div>
+      <div class="step">
+        <div class="step-arr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="step-num">02</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>Free Inspection</h3>
+        <p>We come to your property and thoroughly inspect inside and out — assessing the pest, severity, and the right plan for your situation.</p>
+      </div>
+      <div class="step">
+        <div class="step-arr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="step-num">03</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Safe Treatment</h3>
+        <p>Our licensed technicians apply targeted, family-safe treatments and explain every step before starting. No surprises.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Guaranteed Results</h3>
+        <p>We don't rest until you're pest-free. Every plan includes a written guarantee — we re-treat for free if pests return in the warranty period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIAL -->
+<section class="sec" id="commercial">
+  <div class="wrap">
+    <div class="comm-grid">
+      <div class="comm-photo reveal">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Commercial pest control for businesses">
+        <div class="comm-photo-overlay">
+          <div class="comm-stat">FREE</div>
+          <div class="comm-label">Commercial Inspection — No Obligation</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="kicker">Commercial Service</div>
+        <h2>Pests Are<br>Bad for Business.</h2>
+        <p class="section-sub">One pest sighting can destroy your reputation online in hours. MD Pest Pros offers discreet, professional commercial pest control that protects your business, customers, and brand.</p>
+        <div class="comm-list">
+          <div class="comm-row">
+            <div class="comm-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div><strong>Hotels &amp; Lodging</strong><span>Bedbug prevention programs and full commercial pest plans.</span></div>
+          </div>
+          <div class="comm-row">
+            <div class="comm-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div><strong>Restaurants &amp; Food Service</strong><span>Health-code compliant treatment with minimal business disruption.</span></div>
+          </div>
+          <div class="comm-row">
+            <div class="comm-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><strong>Office Buildings &amp; Properties</strong><span>Preventive plans built for property management needs.</span></div>
+          </div>
+          <div class="comm-row">
+            <div class="comm-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div><strong>Healthcare &amp; Schools</strong><span>Safe certified treatments for sensitive environments.</span></div>
+          </div>
+          <div class="comm-row">
+            <div class="comm-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div><strong>Discreet Service</strong><span>We work quietly around your schedule — customers won't notice a thing.</span></div>
+          </div>
+        </div>
+        <div style="margin-top:28px">
+          <a class="n-cta" href="#contact" style="padding:14px 30px;border-radius:12px;font-size:.95rem">Get a Free Business Inspection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE BANNER -->
+<div class="guarantee-banner">
+  <div class="wrap">
+    <div class="g-inner reveal">
+      <div class="g-badge-wrap">
+        <img src="https://static.wixstatic.com/media/2278c8_5bb91b28b877479189be7387e6558d4a~mv2_d_1454_1307_s_2.jpg/v1/fill/w_169,h_155,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/guarantee.jpg" alt="MD Pest Pros Satisfaction Guarantee">
+      </div>
+      <div class="g-text">
+        <div class="kicker" style="color:rgba(255,255,255,.6)">Our Promise</div>
+        <h2>We Won't Rest Until<br>You're Pest-Free.</h2>
+        <p>Every service is backed by a written guarantee. If pests return within the warranty period, we come back and re-treat at no charge. No questions asked.</p>
+      </div>
+      <div class="g-points">
+        <div class="gp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>90-Day Roach Guarantee</div>
+        <div class="gp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>1-Year Termite Guarantee</div>
+        <div class="gp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Bedbug Elimination Guarantee</div>
+        <div class="gp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Family &amp; Pet Safe</div>
+        <div class="gp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="sec pale" id="reviews">
+  <div class="wrap">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+      <div>
+        <div class="kicker">Customer Reviews</div>
+        <h2>Turning Customers<br>Into Family.</h2>
+      </div>
+      <a class="google-link" href="https://www.google.com/search?q=md+pest+patrol" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/2278c8_669750cb9ae74c2abfc7f002febe99b9~mv2.png/v1/fill/w_119,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/googlelogo_color_92x30dp.png" alt="Google">
+        See all Google reviews →
+      </a>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev-card reveal">
+        <div class="rev-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"They completely eliminated our bedbug problem. Called Monday, treated Wednesday. Slept soundly for the first time in weeks. Professional, thorough, and honest from the start."</blockquote>
+        <div class="rev-author"><div class="rev-avatar">SM</div><div><strong>Sarah M.</strong><span>Baltimore, MD · Bedbug Service</span></div></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rev-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"We had a severe cockroach infestation. Their Knock-Out plan worked exactly as described. That 90-day guarantee is the real deal — they returned once at no charge and now we're completely free."</blockquote>
+        <div class="rev-author"><div class="rev-avatar">KR</div><div><strong>Keisha R.</strong><span>Baltimore City · Cockroach Service</span></div></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rev-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffd040"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"Honest pricing, no hidden fees, no upselling. I've used MD Pest Pros for 5 years. They truly treat you like family. My mice problem was gone after three visits and has never returned."</blockquote>
+        <div class="rev-author"><div class="rev-avatar">DL</div><div><strong>David L.</strong><span>Pikesville, MD · Rodent Control</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="kicker">Get Help Today</div>
+        <h2>Ready to Be<br>Pest-Free?</h2>
+        <p class="section-sub">Call for the fastest response. Or fill out the form and we'll follow up quickly — often the same day.</p>
+        <div class="info-list">
+          <div class="info-row">
+            <div class="info-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><small>Phone</small><strong><a href="tel:14432266064" style="color:inherit">443-226-6064</a></strong></div>
+          </div>
+          <div class="info-row">
+            <div class="info-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><small>Email</small><strong><a href="mailto:service@mdpestpros.com" style="color:inherit">service@mdpestpros.com</a></strong></div>
+          </div>
+          <div class="info-row">
+            <div class="info-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><small>Address</small><strong>500 North Port Street, Baltimore, MD 21205</strong></div>
+          </div>
+        </div>
+        <div class="license-note">
+          <strong>Maryland Department of Agriculture</strong><br>
+          Trade License No. 31917 · Licensed, Bonded &amp; Insured
+        </div>
+        <div class="payment-strip">
+          <div>
+            <small>Accepted Payment Methods</small>
+            <img src="https://static.wixstatic.com/media/2278c8_dd81a1f4ed5140f5a54b7f6e8e0867a3~mv2.png/v1/fill/w_192,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CCARDS.png" alt="Credit Cards">
+          </div>
+          <div style="font-size:.8rem;color:var(--body)">Also: PayPal · Venmo · Zelle · CashApp</div>
+        </div>
+        <div style="margin-top:20px">
+          <div style="font-size:.71rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Service Areas</div>
+          <div class="area-chips">
+            <div class="area-chip">Baltimore City</div>
+            <div class="area-chip">Baltimore County</div>
+            <div class="area-chip">Carroll County</div>
+            <div class="area-chip">Pikesville</div>
+            <div class="area-chip">Catonsville</div>
+            <div class="area-chip">Towson</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <div class="form-top">
+            <img class="form-top-img" src="https://static.wixstatic.com/media/2278c8_dd55a1c7506e4bf685abd6e9d446b6c9~mv2.png/v1/fill/w_148,h_183,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/exterm_4.png" alt="MD Pest Pros">
+            <div>
+              <h3>Schedule Free Inspection</h3>
+              <p>We'll follow up quickly — often same day.</p>
+            </div>
+          </div>
+          <div class="form-body">
+            <form id="pestForm">
+              <div class="fg">
+                <div class="field"><label>Your Name</label><input type="text" placeholder="John Smith" required></div>
+                <div class="field"><label>Phone Number</label><input type="tel" placeholder="443-xxx-xxxx" required></div>
+                <div class="field full"><label>City / Zip Code</label><input type="text" placeholder="e.g. Baltimore, 21201"></div>
+                <div class="field full">
+                  <label>What pest are you dealing with?</label>
+                  <select required>
+                    <option value="">Select a pest…</option>
+                    <option>Bed Bugs</option>
+                    <option>Cockroaches</option>
+                    <option>Mice / Rats</option>
+                    <option>Termites</option>
+                    <option>Ants</option>
+                    <option>Mosquitoes / Fleas</option>
+                    <option>Spiders / Stink Bugs</option>
+                    <option>Not Sure — Need Inspection</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label>Residential or Commercial?</label>
+                  <select><option>Residential</option><option>Commercial</option></select>
+                </div>
+                <div class="field full"><label>Describe what you're seeing (optional)</label><textarea placeholder="Where are pests appearing? Any bites, droppings, or damage?"></textarea></div>
+              </div>
+            </form>
+          </div>
+          <div class="form-foot">
+            <button class="submit-btn" onclick="submitForm()">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Request Free Inspection
+            </button>
+            <div class="form-note">We respond same day when possible · No obligation</div>
+            <div id="formMsg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo">
+          <img src="https://static.wixstatic.com/media/e90401_ad0c2cca82bf4e0c9eba9a8ecba9a951~mv2.jpg/v1/crop/x_0,y_0,w_383,h_95/fill/w_532,h_132,al_c,lg_1,q_80,enc_avif,quality_auto/MDPest_1_edited.jpg" alt="MD Pest Pros">
+        </div>
+        <p class="foot-about">Baltimore's trusted pest control specialists. Turning customers into family for over 10 years. MD Licensed #31917.</p>
+        <a class="foot-fb" href="https://www.facebook.com/MDpestpatrol/" target="_blank" rel="noopener">
+          <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png" alt="Facebook">
+          Like us on Facebook
+        </a>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Common Pest Service</a>
+        <a href="#services">Rodent Control</a>
+        <a href="#services">Bedbug Extermination</a>
+        <a href="#services">Cockroach Knock-Out</a>
+        <a href="#services">Termite Treatment</a>
+        <a href="#services">Property Inspection</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#spotter">Pest Spotter</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#reviews">Reviews</a>
+        <a href="https://www.mdpestpros.com/pestuniversity" target="_blank" rel="noopener">Pest University</a>
+        <a href="https://www.mdpestpros.com/policiesandpayments" target="_blank" rel="noopener">Policies &amp; Payments</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:14432266064">443-226-6064</a>
+        <a href="mailto:service@mdpestpros.com">service@mdpestpros.com</a>
+        <a>500 North Port St</a>
+        <a>Baltimore, MD 21205</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 MD Pest Pros · MD Dept. of Agriculture License #31917</span>
+      <span>Serving Baltimore City, County &amp; Carroll County</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT CTA -->
+<a class="float-cta" href="tel:14432266064">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.14 2 2 0 012.38 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  Call Now
+</a>
+
+<script>
+// Burger
+const burger=document.getElementById('burger');
+const drawer=document.getElementById('drawer');
+burger.addEventListener('click',()=>drawer.classList.toggle('open'));
+function closeD(){drawer.classList.remove('open')}
+
+// Reveal
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// Pest Spotter — uses REAL images from their site
+const pestData={
+  bedbug:{
+    img:'https://static.wixstatic.com/media/2278c8_e65f77b719124d519d783e24ee7aef38~mv2.gif',
+    title:'Bed Bugs',
+    desc:'Small reddish-brown insects that feed on blood while you sleep. They hide in mattress seams, furniture cracks, and baseboards — spreading room to room rapidly if not treated.',
+    facts:['A single female lays up to 500 eggs in her lifetime.','They survive up to 1 full year without feeding.','Store-bought sprays do not kill eggs — professional treatment is the only solution.']
+  },
+  roach:{
+    img:'https://static.wixstatic.com/media/2278c8_95b43e579fc4461db96e17da4ae3f6a6~mv2.jpg/v1/fill/w_82,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/americ_cockroach.jpg',
+    title:'Cockroaches',
+    desc:'One of the most dangerous pests — they contaminate food, trigger asthma, and carry 33+ types of bacteria. If you see one, hundreds more are hiding in your walls.',
+    facts:['Cockroaches carry Salmonella, E. coli, and other pathogens.','A single pair can produce over 35,000 offspring per year.','They rapidly develop resistance to over-the-counter pesticides.']
+  },
+  mouse:{
+    img:'https://static.wixstatic.com/media/2278c8_cc29f71d7b5d408a92c1d347e8221819~mv2.jpg/v1/fill/w_130,h_60,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/house_mouse.jpg',
+    title:'Mice & Rats',
+    desc:'Rodents chew electrical wiring (causing fires), contaminate food, and carry diseases including Hantavirus. They enter your home through gaps as small as a dime.',
+    facts:['A mouse can squeeze through a hole the size of a dime.','Rodent-chewed wiring is a leading cause of house fires.','A pair of mice can produce 60+ offspring per year.']
+  },
+  flea:{
+    img:'https://static.wixstatic.com/media/2278c8_47559e6721834ee9b943c7856885cf24~mv2.jpg/v1/fill/w_95,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/flea.jpg',
+    title:'Fleas',
+    desc:'Fleas carry tapeworms and can infest a home rapidly — especially in homes with pets. Flea eggs embedded in carpet can hatch months after initial treatment without professional care.',
+    facts:['Fleas can jump 150 times their own body length.','Flea eggs lie dormant in carpet for months before hatching.','One flea can lay up to 50 eggs per day.']
+  },
+  ant:{
+    img:'https://static.wixstatic.com/media/2278c8_88462105fdda4f9490045c8275727fcf~mv2.jpg/v1/fill/w_73,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/acrobat_ant.jpg',
+    title:'Ants',
+    desc:'Most ants are a nuisance, but carpenter ants hollow out structural wood like termites. Spraying visible ants often backfires — it can cause the colony to split and multiply.',
+    facts:['Carpenter ants cause similar structural damage to termites.','Spraying ants can cause the colony to bud and spread.','A single colony can contain hundreds of thousands of workers.']
+  },
+  stink:{
+    img:'https://static.wixstatic.com/media/2278c8_856aedc5f7da4f4e8c10aac24d975b61~mv2_d_1390_1321_s_2.jpg/v1/crop/x_0,y_0,w_1169,h_1321/fill/w_74,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/stinkbug.jpg',
+    title:'Stink Bugs',
+    desc:'Stink bugs invade homes in large numbers in fall, seeking warmth. They release a foul odor when disturbed or crushed, and a single entry point can allow thousands inside.',
+    facts:['A single stink bug can attract many more via pheromone signals.','They seek shelter inside homes in autumn — often in large numbers.','Crushing them releases a powerful odor and attracts more.']
+  }
+};
+
+function showPest(type,el){
+  document.querySelectorAll('.sp-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  const d=pestData[type];
+  document.getElementById('det-img').src=d.img;
+  document.getElementById('det-img').alt=d.title;
+  document.getElementById('det-title').textContent=d.title;
+  document.getElementById('det-desc').textContent=d.desc;
+  document.getElementById('det-facts').innerHTML=d.facts.map(f=>`<div class="sd-fact">${f}</div>`).join('');
+}
+
+function submitForm(){
+  document.getElementById('formMsg').textContent="Request received! We'll be in touch shortly — often same day.";
+  document.getElementById('pestForm').reset();
+}
+</script>
+</body>
+</html>
